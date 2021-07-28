@@ -1,0 +1,36 @@
+<package>
+    <job id="SteamPath">
+        <!--
+            Inspects the windows registry to find the steam installation folder.
+        -->
+        <script language="JScript" src="vdf.js"/>
+        <script language="JScript" src="steam.js"/>
+        <script language="JScript">    
+            WScript.Echo(toJson(GetSteamPath()));
+        </script>
+    </job>
+
+    <job id="SteamAppsPaths">
+        <!--
+            Inspects the steam installation and returns a JSON array containing all
+            valid steamapps directories across all drives.
+        -->
+        <script language="JScript" src="vdf.js"/>
+        <script language="JScript" src="steam.js"/>
+        <script language="JScript">    
+            WScript.Echo(toJson(GetSteamAppsPaths()));
+        </script>
+    </job>
+
+    <job id="SteamGames">
+        <!--
+            Inspects the steam installation and returns a JSON array containing info 
+            about all installed steam games, including their install directories.
+        -->
+        <script language="JScript" src="vdf.js"/>
+        <script language="JScript" src="steam.js"/>
+        <script language="JScript">    
+            WScript.Echo(toJson(GetSteamGames()));
+        </script>
+    </job>
+</package>
